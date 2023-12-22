@@ -1,3 +1,53 @@
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-Bold.woff2") format("woff2"), url("../fonts/Poppins-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: fontawesome;
+  font-display: swap;
+  src: url("../fonts/fontawesome.woff2") format("woff2"), url("../fonts/fontawesome.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-Italic.woff2") format("woff2"), url("../fonts/Poppins-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 @font-face {
   font-family: Poppins;
   font-display: swap;
@@ -46,53 +96,41 @@
   font-style: normal;
 }
 
-
-@font-face {
-  font-family: Poppins;
-  font-display: swap;
-  src: url("../fonts/Poppins-Bold.woff2") format("woff2"), url("../fonts/Poppins-Bold.woff") format("woff");
+.wall-block__link,
+.strategy__click {
+  color: #D4D6D4;
+  font-family: FontAwesome;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 700;
-  font-style: normal;
+  line-height: normal;
+  text-decoration-line: underline;
 }
 
-@font-face {
-  font-family: Poppins;
-  font-display: swap;
-  src: url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff");
+.wall-block__link a::before,
+.strategy__click a::before {
+  content: "";
+  display: inline-block;
+  bottom: 7px;
+  border: 5px solid transparent;
+  border-left: 5px solid #D4D6D4;
+  margin-right: 2px;
+}
+
+.wall-block__title,
+.multiple-block__title {
+  color: #4D533C;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.wall-block__text,
+.multiple-block__text {
+  color: rgba(33, 56, 66, 0.6);
+  font-style: normal;
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Poppins;
-  font-display: swap;
-  src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: fontawesome;
-  font-display: swap;
-  src: url("../fonts/fontawesome.woff2") format("woff2"), url("../fonts/fontawesome.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Poppins;
-  font-display: swap;
-  src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Poppins;
-  font-display: swap;
-  src: url("../fonts/Poppins-Italic.woff2") format("woff2"), url("../fonts/Poppins-Italic.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
+  line-height: 26px;
+  /* 162.5% */
 }
 
 * {
@@ -199,6 +237,7 @@ h6 {
 }
 
 
+
 [class*=__container] {
   max-width: 71.1875rem;
   margin: 0 auto;
@@ -206,7 +245,8 @@ h6 {
 }
 
 
-.no-webp .header {background: url(/img/header/Slider.jpg) no-repeat; }
+
+.no-webp .header {background: url(/img/header/Slider.jpg) center no-repeat; }
 
 .header {
   min-height: 811px;
@@ -303,7 +343,10 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 301px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 151px;
 }
 
 .strategy__work {
@@ -332,6 +375,8 @@ h6 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 160px;
+  border-bottom: 1px solid rgba(33, 56, 66, 0.1);
+  padding-bottom: 150px;
 }
 
 .strategy__item {
@@ -372,25 +417,6 @@ h6 {
   line-height: 26px;
   /* 162.5% */
   padding-bottom: 42px;
-}
-
-.strategy__click {
-  color: #D4D6D4;
-  font-family: FontAwesome;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-decoration-line: underline;
-}
-
-.strategy__click a::before {
-  content: "";
-  display: inline-block;
-  bottom: 7px;
-  border: 5px solid transparent;
-  border-left: 5px solid #D4D6D4;
-  margin-right: 2px;
 }
 
 .strategy__quote {
@@ -468,4 +494,128 @@ h6 {
   line-height: normal;
 }
 
-.webp .header { background: url(/img/header/Slider.webp) no-repeat; }
+.multiple-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 0;
+  gap: 100px;
+}
+
+.multiple-block__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 133px;
+}
+
+.multiple-block__title {
+  max-width: 325px;
+  font-size: 36px;
+  line-height: normal;
+}
+
+.multiple-block__text {
+  max-width: 518px;
+}
+
+.wall-block {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 0;
+  gap: 56px;
+}
+
+.wall-block__quote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 453px;
+  max-height: 243px;
+  padding: 30px;
+  background-color: #FFF;
+  -webkit-filter: drop-shadow(50px 50px 100px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(50px 50px 100px rgba(0, 0, 0, 0.15));
+  border-radius: 10px;
+  margin-top: -178px;
+  gap: 24px;
+  margin-left: 322px;
+}
+
+.wall-block__text-quote {
+  font-style: italic;
+  font-weight: 400;
+  line-height: 26px;
+  /* 162.5% */
+}
+
+.wall-block__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 14px;
+}
+
+.wall-block__name {
+  color: #4D533C;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.wall-block__from {
+  color: #152934;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.wall-block__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 397px;
+  margin-top: 80px;
+}
+
+.wall-block__title {
+  font-size: 36px;
+  line-height: 48px;
+  /* 133.333% */
+  padding-bottom: 24px;
+  max-width: 308px;
+}
+
+.wall-block__text {
+  padding-bottom: 90px;
+  max-width: 421px;
+}
+
+.webp .header { background: url(/img/header/Slider.webp) center no-repeat; }
